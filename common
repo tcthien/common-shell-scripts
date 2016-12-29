@@ -16,6 +16,7 @@ function logTask(){
     echo "Execute: $1 ---------------------------------------------------------------------------"
 }
 
+# Git Util scripts ----------------------------------------------------------------------------
 function gitCacheCredential(){
     git config --global credential.helper "cache --timeout=604800"
 }
