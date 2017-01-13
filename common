@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=350m"
+
 alias cd1="cd .."
 alias cd2="cd ../.."
 alias cd3="cd ../../.."
@@ -18,7 +20,12 @@ function logTask(){
 
 # Git Util scripts ----------------------------------------------------------------------------
 function gitCacheCredential(){
+    # Linux
     git config --global credential.helper "cache --timeout=604800"
+    # Window
+    # git config --global credential.helper wincred
+    # Mac OS X
+    # git config --global credential.helper osxkeychain
 }
 
 # Maven Util scripts ----------------------------------------------------------------------------
