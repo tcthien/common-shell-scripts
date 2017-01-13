@@ -6,6 +6,7 @@
 #Comment out bind-address to enable accessing from remote
 #bind-address   = 127.0.0.1
 ```
+
     * After update my.cnf, execute following commands:
 ```
 sudo service mysql restart
@@ -26,6 +27,7 @@ broadcast_rpc_address: localhost
 # Enable password authenticator
 authenticator: PasswordAuthenticator
 ```
+
     * After update cassandra.yaml, execute following commands:
 ```
 cqlsh localhost -u cassandra -p cassandra
