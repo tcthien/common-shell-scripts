@@ -1,6 +1,8 @@
 #!/bin/bash
 
+export CDPATH=$CDPATH:~/:~/development:~/scripts
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=350m"
+export PATH=$PATH:~/scripts/common-shell-scripts
 
 alias cd1="cd .."
 alias cd2="cd ../.."
