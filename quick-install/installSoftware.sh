@@ -168,7 +168,7 @@ installingAnt()
 {
   installingApp 'apache-ant' \
     apache-ant-1.9.7-bin.tar.gz \
-    http://www.eu.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.tar.gz \
+    http://www.eu.apache.org/dist/ant/binaries/apache-ant-1.10.1-bin.tar.gz \
     'apache-ant*' \
     apache-ant
 }
