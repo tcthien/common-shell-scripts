@@ -46,6 +46,7 @@ installingApp()
   local url=$3
   local link_src=$4
   local link_target=$5
+  cd ~/bin/
   echo "Installing $tool_name"
   indent; download $file $url
   indent; echo -n "Extracting $file"
@@ -167,7 +168,7 @@ installingMvn()
 installingAnt()
 {
   installingApp 'apache-ant' \
-    apache-ant-1.9.7-bin.tar.gz \
+    apache-ant-1.10.1-bin.tar.gz \
     http://www.eu.apache.org/dist/ant/binaries/apache-ant-1.10.1-bin.tar.gz \
     'apache-ant*' \
     apache-ant
