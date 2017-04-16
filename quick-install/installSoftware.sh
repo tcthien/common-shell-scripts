@@ -263,6 +263,8 @@ updateBashrc()
     #Start of template
     appendToBashrc 'export PATH="~/.jenv/bin:~/bin/apache-maven/bin:~/bin/gradle/bin:~/bin/sbt/bin:~/bin/apache-ant/bin:$PATH"'
     appendToBashrc 'eval "$(jenv init -)"'
+    echo "# Entry point for source setup" >> .bashrc
+    echo "source ~/java-env" >> .bashrc
 
     export PATH="~/.jenv/bin:~/bin/apache-maven/bin:~/bin/gradle/bin:~/bin/sbt/bin:~/bin/apache-ant/bin:$PATH"
     eval "$(jenv init -)"
@@ -279,9 +281,9 @@ installingSbt
 installNodeJSTool
 installDocker
 
-updateBashrc
 installEnvManagers
 installRuntimes
+updateBashrc
 
 installCommonShellScript
 
