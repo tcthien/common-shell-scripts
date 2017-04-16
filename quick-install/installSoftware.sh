@@ -269,19 +269,19 @@ updateBashrc()
 }
 
 setup
-#installPackages
+installPackages
 
-#installJdks
-#installingMvn
-#installingAnt
-#installingGradle
-#installingSbt
-#installNodeJSTool
-#installDocker
+installJdks
+installingMvn
+installingAnt
+installingGradle
+installingSbt
+installNodeJSTool
+installDocker
 
 updateBashrc
 installEnvManagers
 installRuntimes
 
-#installCommonShellScript
+installCommonShellScript
 
