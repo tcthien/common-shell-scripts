@@ -46,6 +46,7 @@ installingApp()
   local url=$3
   local link_src=$4
   local link_target=$5
+  cd ~/bin/
   echo "Installing $tool_name"
   indent; download $file $url
   indent; echo -n "Extracting $file"
@@ -167,8 +168,8 @@ installingMvn()
 installingAnt()
 {
   installingApp 'apache-ant' \
-    apache-ant-1.9.7-bin.tar.gz \
-    http://www.eu.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.tar.gz \
+    apache-ant-1.10.1-bin.tar.gz \
+    http://www.eu.apache.org/dist/ant/binaries/apache-ant-1.10.1-bin.tar.gz \
     'apache-ant*' \
     apache-ant
 }
@@ -263,25 +264,27 @@ updateBashrc()
     #Start of template
     appendToBashrc 'export PATH="~/.jenv/bin:~/bin/apache-maven/bin:~/bin/gradle/bin:~/bin/sbt/bin:~/bin/apache-ant/bin:$PATH"'
     appendToBashrc 'eval "$(jenv init -)"'
+    echo "# Entry point for source setup" >> .bashrc
+    echo "source ~/java-env" >> .bashrc
 
     export PATH="~/.jenv/bin:~/bin/apache-maven/bin:~/bin/gradle/bin:~/bin/sbt/bin:~/bin/apache-ant/bin:$PATH"
     eval "$(jenv init -)"
 }
 
 setup
-#installPackages
+installPackages
 
-#installJdks
-#installingMvn
-#installingAnt
-#installingGradle
-#installingSbt
-#installNodeJSTool
-#installDocker
+installJdks
+installingMvn
+installingAnt
+installingGradle
+installingSbt
+installNodeJSTool
+installDocker
 
-updateBashrc
 installEnvManagers
 installRuntimes
+updateBashrc
 
-#installCommonShellScript
+installCommonShellScript
 
