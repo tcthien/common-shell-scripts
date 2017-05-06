@@ -55,9 +55,11 @@ installJdks()
     indent; echo 'Cleaning jdks'
     rm jdk*.tar.gz
     ls
+    appendToBashrc '# Variable for JDK8 software'
     appendToBashrc 'export JAVA_HOME=~/bin/jdk1.8.0_112'
     appendToBashrc 'export PATH=$JAVA_HOME/bin'
   fi
 }
 
 installJdks
+
