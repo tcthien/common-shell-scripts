@@ -472,7 +472,7 @@ export GIT_ASKPASS=echo
 
 travis_fold start git.checkout
   if [[ ! -d openup/nokiaopenup//.git ]]; then
-    travis_cmd git\ clone\ --depth\=50\ --branch\=\'release/4.0.4\'\ https://trancuuthien:vy860612@bitbucket.org/openup/nokiaopenup/\ openup/nokiaopenup/ --assert --echo --retry --timing
+    travis_cmd git\ clone\ --depth\=50\ --branch\=\'release/4.0.4\'\ https://trancuuthien@bitbucket.org/openup/nokiaopenup/\ openup/nokiaopenup/ --assert --echo --retry --timing
   else
     travis_cmd git\ -C\ openup/nokiaopenup/\ fetch\ origin --assert --echo --retry --timing
     travis_cmd git\ -C\ openup/nokiaopenup/\ reset\ --hard --assert --echo
